@@ -79,6 +79,49 @@ body {
   border-radius: 50%;
 }
 
+.share-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.share-box {
+  position: absolute;
+  background-color: var(--VeryDarkGrayishBlue);
+  border-radius: 12px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-family: var(--FontPrimary);
+  bottom: 475px;
+  right: 460px;
+  display: none;
+}
+
+.share-triangle {
+  position: absolute;
+  bottom: 460px;
+  right: 560px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid var(--VeryDarkGrayishBlue); /* 三角形顏色 */
+  display: none;
+}
+
+.share-box > :first-child {
+  letter-spacing: 5px;
+  color: var(--GrayishBlue);
+  margin-right: 10px;
+}
+
+.share-box > .share_btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;   
+}
+
 h1 {
   font-family: var(--FontPrimary);
   font-size: 24px;
@@ -106,7 +149,6 @@ p {
   color: var(--GrayishBlue);
   font-size: 14px;
 }
-
 
 @media (max-width: 1200px) {
   .flex-container {

@@ -6,7 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
   <title>Frontend Mentor | Article preview component</title>
 
 </head>
@@ -26,9 +25,20 @@
           <div class="name">Michelle Appleton</div>
           <div class="date">28 Jun 2020</div>
         </div>
-        <div class="share-icon"></div>
+        <div class="share-icon" id="sharebtn"></div>
       </div>      
     </div>
   </main>
+  <div class="share-box" z-index="-1" id="sharebox">
+    <div class="share-text">SHARE</div>
+    <div class="share_btn" style="background-image: url('images/icon-facebook.svg');"></div>
+    <div class="share_btn" style="background-image: url('images/icon-twitter.svg');"></div>
+    <div class="share_btn" style="background-image: url('images/icon-pinterest.svg');"></div>
+  </div>
+  <div class="share-triangle" id="sharetriangle"></div>
+
+
+  <script src="main.js"></script>
 </body>
 </html>
+
