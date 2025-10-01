@@ -32,13 +32,6 @@ body {
   max-width: 910px;
 }
 
-.text-content {
-  background-color: var(--White);
-  border-radius: 0px 12px 12px 0px;
-  padding: 50px;
-  flex: 60%;
-}
-
 .picture-content {
   flex: 40%;
 }
@@ -49,6 +42,19 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: left;
+}
+
+.flex-right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 60%;
+  position: relative;
+} 
+
+.text-content {
+  background-color: var(--White);
+  border-radius: 0px 12px 12px 0px;
+  padding: 50px;
 }
 
 .with-icon {
@@ -67,6 +73,14 @@ body {
   margin-left: auto; /* 把最後一個元素推到右邊 */
 }
 
+.share_btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;   
+}
+
 .share-icon {
   background-color: var(--LightGrayishBlue);
   border-radius: 50%;
@@ -79,43 +93,44 @@ body {
   cursor: pointer;  
 }
 
-.share-container {
-  display: flex;
-  flex-direction: column;
+.share-box-panel {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: var(--VeryDarkGrayishBlue);
+  border-radius: 0 0px 12px 12px;
+  padding: 10px 25px;
+  align-items: center;
+  z-index: 1;
+  font-family: var(--FontPrimary);
 }
 
-.share-box {
+.share-box-popup {
+  display: none;
   position: absolute;
   background-color: var(--VeryDarkGrayishBlue);
   border-radius: 12px;
   padding: 10px 25px;
-  display: flex;
   align-items: center;
   z-index: 1;
   font-family: var(--FontPrimary);
-  bottom: 475px;
-  right: 460px;
-  display: none;
+  bottom: 130px;
+  right: -50px;
 }
 
-.share-box > :first-child {
+.share-box-panel > :first-child, 
+.share-box-popup > :first-child {
   letter-spacing: 5px;
   color: var(--GrayishBlue);
   margin-right: 10px;
 }
 
-.share-box > .share_btn {
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;   
-}
-
 .share-triangle {
   position: absolute;
-  bottom: 460px;
-  right: 560px;
+  bottom: 115px;
+  right: 50px;
   border-left: 16px solid transparent;
   border-right: 16px solid transparent;
   border-top: 16px solid var(--VeryDarkGrayishBlue); /* 三角形顏色 */
@@ -126,7 +141,7 @@ h1 {
   font-family: var(--FontPrimary);
   font-size: 24px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.5;
   color: var(--VeryDarkGrayishBlue);
 }
 
@@ -151,10 +166,6 @@ p {
 }
 
 @media (max-width: 1200px) {
-  .flex-container {
-    max-width: 584px;
-  }
-
   .picture-content img {
     border-radius: 12px 12px 0px 0px;
     object-fit: cover;
@@ -171,22 +182,6 @@ p {
     flex: 100%;
   }
 
-  .share-box {
-    width: 90%;
-    border-radius: 0px 0px 12px 12px;
-    height: 100px;
-    bottom: 165px;
-    right: 20px;
-    z-index: 1;
-    flex: 100%;
-  }
-
-  .share-icon {
-    background-color: var(--DesaturatedDarkBlue);
-    background-image: url('images/icon-share_white.svg');
-    z-index: 2;
-  }
-
   .share-triangle {
     display: none;
   }
@@ -195,15 +190,7 @@ p {
     font-size: 18px;
   }
 
-  p {
+  .name, .date, p {
     font-size: 14px;
-  }
-
-  .name {
-    font-size: 14px;
-  }
-
-  .date {
-    font-size: 13px;
   }
 }

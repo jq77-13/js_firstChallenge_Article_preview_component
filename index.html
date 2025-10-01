@@ -12,32 +12,36 @@
 <body>
   <main class="flex-container">
     <div class="picture-content">
-      <picture>
-        <img src="images/drawers.jpg" alt="drawers">
-      </picture>
+      <img src="images/drawers.jpg" alt="drawers">
     </div>
-    <div class="text-content">
-      <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
-      <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
-      <div class="with-icon">
-        <img src="images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar">
-        <div>
-          <div class="name">Michelle Appleton</div>
-          <div class="date">28 Jun 2020</div>
-        </div>
-        <div class="share-icon" id="sharebtn"></div>
-      </div>      
+    <div class="flex-right-container">
+      <div class="text-content" id="textcontent">
+        <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+        <div class="with-icon">
+          <img src="images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar">
+          <div>
+            <div class="name">Michelle Appleton</div>
+            <div class="date">28 Jun 2020</div>
+          </div>
+          <div class="share-icon" id="sharebtn"></div>
+        </div>      
+      </div>
+      <div class="share-box-panel" id="shareboxpanel">
+        <div class="share-text">SHARE</div>
+        <div class="share_btn" style="background-image: url('images/icon-facebook.svg');"></div>
+        <div class="share_btn" style="background-image: url('images/icon-twitter.svg');"></div>
+        <div class="share_btn" style="background-image: url('images/icon-pinterest.svg');"></div>
+      </div>
+      <div class="share-box-popup" id="shareboxpopup">
+        <div class="share-text">SHARE</div>
+        <div class="share_btn" style="background-image: url('images/icon-facebook.svg');"></div>
+        <div class="share_btn" style="background-image: url('images/icon-twitter.svg');"></div>
+        <div class="share_btn" style="background-image: url('images/icon-pinterest.svg');"></div>
+      </div>
+      <div class="share-triangle" id="sharetriangle"></div>
     </div>
   </main>
-  <div class="share-box" z-index="-1" id="sharebox">
-    <div class="share-text">SHARE</div>
-    <div class="share_btn" style="background-image: url('images/icon-facebook.svg');"></div>
-    <div class="share_btn" style="background-image: url('images/icon-twitter.svg');"></div>
-    <div class="share_btn" style="background-image: url('images/icon-pinterest.svg');"></div>
-  </div>
-  <div class="share-triangle" id="sharetriangle"></div>
-
-
   <script src="main.js"></script>
 </body>
 </html>

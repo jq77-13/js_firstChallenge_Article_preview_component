@@ -15,21 +15,46 @@ colorVars.forEach(name => {
 // 用法：colors.VeryDarkGrayishBlue
 
 const sharebtn = document.getElementById("sharebtn");
-const sharebox = document.getElementById("sharebox");
 const sharetriangle = document.getElementById("sharetriangle");
+const shareboxPanel = document.getElementById("shareboxpanel");
+const shareboxPopup = document.getElementById("shareboxpopup");
+const textcontent = document.getElementById("textcontent");
 
 document.getElementById("sharebtn").onclick = ShowShareBox;
 
 function ShowShareBox() {
-  if (sharebox.style.display === "none" || sharebox.style.display === "") {
-    sharebox.style.display = "flex"; // 或 "block"，依你的 CSS 設定
-    sharetriangle.style.display = "block";
-    sharebtn.style.backgroundColor = colors.DesaturatedDarkBlue;
-    sharebtn.style.backgroundImage = "url('images/icon-share_white.svg')";
+  const isMobile = window.matchMedia("(max-width: 1200px)").matches;
+
+  if (isMobile) {
+    // 展開 panel
+    if (shareboxPanel.style.display === "flex") {
+      shareboxPanel.style.display = "none";
+      sharebtn.style.backgroundColor = colors.LightGrayishBlue;
+      sharebtn.style.backgroundImage = "url('images/icon-share.svg')";
+      sharebtn.style.zIndex = "0";
+      textcontent.style.paddingBottom = "30px";
+    } else {
+      shareboxPanel.style.display = "flex";
+      shareboxPopup.style.display = "none";
+      sharebtn.style.backgroundColor = colors.DesaturatedDarkBlue;
+      sharebtn.style.backgroundImage = "url('images/icon-share_white.svg')";
+      sharebtn.style.zIndex = "2";
+      textcontent.style.paddingBottom = "15px";
+    }
+
   } else {
-    sharebox.style.display = "none";
-    sharetriangle.style.display = "none";
-    sharebtn.style.backgroundColor = colors.LightGrayishBlue;
-    sharebtn.style.backgroundImage = "url('images/icon-share.svg')";
+    // 展開 popup
+    if (shareboxPopup.style.display === "flex") {
+      shareboxPopup.style.display = "none";
+      sharetriangle.style.display = "none";
+      sharebtn.style.backgroundColor = colors.LightGrayishBlue;
+      sharebtn.style.backgroundImage = "url('images/icon-share.svg')";
+    } else {
+      shareboxPopup.style.display = "flex";
+      shareboxPanel.style.display = "none";
+      sharetriangle.style.display = "block";
+      sharebtn.style.backgroundColor = colors.DesaturatedDarkBlue;
+      sharebtn.style.backgroundImage = "url('images/icon-share_white.svg')";  
+    }
   }
 }
