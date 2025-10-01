@@ -57,6 +57,12 @@ body {
   gap: 1em;
 }
 
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 .with-icon > :last-child {
   margin-left: auto; /* 把最後一個元素推到右邊 */
 }
@@ -71,12 +77,6 @@ body {
   width: 36px;
   height: 36px;
   cursor: pointer;  
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
 }
 
 .share-container {
@@ -98,16 +98,6 @@ body {
   display: none;
 }
 
-.share-triangle {
-  position: absolute;
-  bottom: 460px;
-  right: 560px;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-top: 16px solid var(--VeryDarkGrayishBlue); /* 三角形顏色 */
-  display: none;
-}
-
 .share-box > :first-child {
   letter-spacing: 5px;
   color: var(--GrayishBlue);
@@ -120,6 +110,16 @@ body {
   width: 36px;
   height: 36px;
   cursor: pointer;   
+}
+
+.share-triangle {
+  position: absolute;
+  bottom: 460px;
+  right: 560px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid var(--VeryDarkGrayishBlue); /* 三角形顏色 */
+  display: none;
 }
 
 h1 {
@@ -164,17 +164,46 @@ p {
   .text-content {
     border-radius: 0px 0px 12px 12px;
     flex: 100%;
+    padding: 30px;
   }
 
   .picture-content {
     flex: 100%;
   }
 
+  .share-box {
+    width: 90%;
+    border-radius: 0px 0px 12px 12px;
+    height: 100px;
+    bottom: 165px;
+    right: 20px;
+    z-index: 1;
+    flex: 100%;
+  }
+
+  .share-icon {
+    background-color: var(--DesaturatedDarkBlue);
+    background-image: url('images/icon-share_white.svg');
+    z-index: 2;
+  }
+
+  .share-triangle {
+    display: none;
+  }
+
   h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   p {
     font-size: 14px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 13px;
   }
 }
