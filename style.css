@@ -45,8 +45,6 @@ body {
 }
 
 .flex-right-container {
-  display: flex;
-  flex-direction: column;
   flex: 60%;
   position: relative;
 } 
@@ -96,14 +94,13 @@ body {
 .share-box-panel {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   height: 80px;
   width: 100%;
   background-color: var(--VeryDarkGrayishBlue);
   border-radius: 0 0px 12px 12px;
   padding: 10px 25px;
   align-items: center;
-  z-index: 1;
   font-family: var(--FontPrimary);
 }
 
@@ -114,7 +111,6 @@ body {
   border-radius: 12px;
   padding: 10px 25px;
   align-items: center;
-  z-index: 1;
   font-family: var(--FontPrimary);
   bottom: 130px;
   right: -50px;
